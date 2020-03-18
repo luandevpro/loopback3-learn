@@ -1,0 +1,29 @@
+{
+    "name": "profile",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "address": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string"
+        },
+        "userId": {
+            "type": "string"
+        }
+    },
+    "validations": [],
+    "relations": {
+        "user": {
+            "type": "belongsTo",
+            "model": "user",
+            "foreignKey": "userId"
+        }
+    },
+    "acls": [],
+    "methods": {}
+}
